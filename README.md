@@ -1,4 +1,4 @@
-# @mtsku/anilist-cli
+# AniList CLI
 
 AniList CLI for search, discovery, airing schedules, social views, and list updates via GraphQL.
 
