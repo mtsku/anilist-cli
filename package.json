@@ -1,0 +1,53 @@
+{
+  "name": "@mtsku/anilist-cli",
+  "version": "0.2.5",
+  "description": "Reliable AniList CLI for search, discovery, social, and list management via direct GraphQL API.",
+  "license": "MIT",
+  "type": "module",
+  "private": false,
+  "bin": {
+    "anilistcli": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "scripts",
+    "README.md",
+    "LICENSE",
+    "SKILL.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "dev": "node --loader ts-node/esm src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "node --test test/*.test.mjs",
+    "prepublishOnly": "npm run check && npm run build && npm test"
+  },
+  "keywords": [
+    "anilist",
+    "anime",
+    "manga",
+    "graphql",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtsku/anilist-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mtsku/anilist-cli/issues"
+  },
+  "homepage": "https://github.com/mtsku/anilist-cli#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
